@@ -1,18 +1,23 @@
-#Challenge 1
+-- E-Commerce Database Normalization: 0NF to 3NF
+-- MySQL project: data audit, normalization, and reporting
+-- Prerequisite: import the source data into raw_orders_1nf before running.
+-- IF NOT EXISTS prevents table-creation errors when tables already exist.
+-- Note: rerunning INSERT statements may still duplicate data or cause key conflicts.
+
+-- SECTION 1: Database setup and source data inspection
 CREATE DATABASE IF NOT EXISTS ecomdb;
 USE ecomdb;
 
-#turns off safety checks
+-- Disable safe-update restrictions and foreign key checks for this assignment workflow.
 SET SQL_SAFE_UPDATES = 0;
 SET FOREIGN_KEY_CHECKS = 0;
 
-#added these here to see what our table look like
+-- Inspect the imported source table.
 SELECT * FROM raw_orders_1nf;
 DESCRIBE raw_orders_1nf;
-#Challenge 2
+-- SECTION 2: Audit missing and invalid source values
 
-#give the total count and then the valid and missing for specific columns
-#It specified only a few columns, but I wanted to be safe so I did all the columns
+-- Count valid and missing values for each source field.
 SELECT 
     COUNT(*) AS total_records,
     COUNT(order_id) AS valid_ids,
@@ -36,47 +41,47 @@ SELECT
     COUNT(review_rating) AS valid_ratings,
     count(*) - count(review_rating) AS missing_ratings
 FROM raw_orders_1nf;
-#Challenge 3
+-- SECTION 3: Create customer, product, and order tables
 
-#made the customer table
-CREATE TABLE customers (
+-- Create the customer lookup table.
+CREATE TABLE IF NOT EXISTS customers (
 	customer_id INT AUTO_INCREMENT PRIMARY KEY,
 	customer_name VARCHAR(125),
     customer_email VARCHAR(125),
     customer_city VARCHAR(125)
 );
 
-#Inserts unqiue combinations into customers table
-#For example each different Rachel Green combo is added
+-- Insert distinct combinations of customer name, email, and city.
+-- Different combinations are treated as separate customer records.
 INSERT IGNORE INTO  customers(customer_name,customer_email,customer_city)
 SELECT DISTINCT customer_name, customer_email, COALESCE(NULLIF(TRIM(customer_city), ''), 'Unknown')
 FROM raw_orders_1nf
 WHERE customer_name IS NOT NULL AND TRIM(customer_name) != '';
 
-#added to see what table looks like
+-- Inspect the customer table.
 DESCRIBE customers;
 SELECT * FROM customers;
 
-#made the products table
-CREATE TABLE products (
+-- Create the product lookup table.
+CREATE TABLE IF NOT EXISTS products (
 	product_id INT AUTO_INCREMENT PRIMARY KEY,
 	product_name VARCHAR(125),
     category_name VARCHAR(125),
     unit_price DOUBLE
 );
 
-#Inserts unique product combinations, including products with zero prices
+-- Insert distinct product combinations, including zero-priced products.
 INSERT IGNORE INTO  products(product_name,category_name,unit_price)
 SELECT DISTINCT product_name, COALESCE(NULLIF(TRIM(category_name), ''), 'General'), unit_price
 FROM raw_orders_1nf
 WHERE product_name IS NOT NULL AND TRIM(product_name) != '';
 
-#give us an idea of the products table
+-- Inspect the product table.
 DESCRIBE products;
 SELECT * FROM products;
 
-#makes an orders fact table
-CREATE TABLE orders (
+-- Create the orders table with foreign keys to customers and products.
+CREATE TABLE IF NOT EXISTS orders (
     order_id INT PRIMARY KEY,
     order_timestamp DATETIME,
     customer_id INT,
@@ -90,8 +95,8 @@ CREATE TABLE orders (
 DESCRIBE orders;
 SELECT * FROM orders;
 
-#challenge 4
-#connects the lookup tables to the fact table
+-- SECTION 4: Populate orders and validate relationships
+-- Match raw orders to customer and product records using joins.
 INSERT INTO orders (
     order_id,
     order_timestamp, 
@@ -122,13 +127,13 @@ LEFT JOIN products p
     
 SELECT * FROM orders;
 
-#deletes rows which have null values
+-- Remove orders missing a valid timestamp or a customer/product reference.
 DELETE FROM orders
 WHERE order_timestamp IS NULL
    OR customer_id IS NULL
    OR product_id IS NULL;
 
-#checks to see if we have values to delete, we don't
+-- Check whether any order references an ID absent from its lookup table.
 SELECT *
 FROM orders
 WHERE customer_id NOT IN (
@@ -140,7 +145,7 @@ OR product_id NOT IN (
     FROM products
 );
 
-#Deletes them anyways for assignment
+-- Assignment validation step: remove orders with invalid lookup references, if any.
 DELETE
 FROM orders
 WHERE customer_id NOT IN (
@@ -150,11 +155,11 @@ WHERE customer_id NOT IN (
 	SELECT product_id
     FROM products);
 
-#turn safety checks back on
+-- Restore the settings changed during setup.
 SET SQL_SAFE_UPDATES = 1;
 SET FOREIGN_KEY_CHECKS = 1;
 
-#challenge 5;
+-- SECTION 5: Create the normalized reporting view
 CREATE OR REPLACE VIEW v_orders_3nf_report AS
 SELECT 
     o.order_id AS ORDER_ID,
@@ -172,8 +177,7 @@ FROM orders o
 INNER JOIN customers c ON o.customer_id = c.customer_id
 INNER JOIN products p ON o.product_id = p.product_id;
 
-#there were two sections that had a unit_price of 0
-#as the condition wasn't specified, I just made sure everything at least was above 0
+-- Show positive-value orders only; zero-priced orders remain in the orders table.
 SELECT * FROM v_orders_3nf_report
 WHERE total_order_amount > 0
 ORDER BY ORDER_TIMESTAMP DESC;
