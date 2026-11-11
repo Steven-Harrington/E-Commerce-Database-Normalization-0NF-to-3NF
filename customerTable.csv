@@ -1,0 +1,45 @@
+customer_id,customer_name,customer_email,customer_city
+1,"Alice Smith",alice.smith@example.com,"Fort Worth"
+2,"Rachel Green",,Dallas
+3,"George Clark",george.clark@example.com,"San Antonio"
+4,"Rachel Green",rachel.green@example.com,Unknown
+5,"Alice Smith",alice.smith@example.com,Houston
+6,"Diana Prince",diana.prince@example.com,"El Paso"
+7,"Bob Jones",bob.jones@example.com,"Corpus Christi"
+8,"Julia Roberts",julia.roberts@example.com,"El Paso"
+9,"Hannah Abbott",hannah.abbott@example.com,"Fort Worth"
+10,"Oscar Martinez",oscar.martinez@example.com,"El Paso"
+11,"Ian Malcolm",ian.malcolm@example.com,Dallas
+12,"Fiona Gallagher",fiona.gallagher@example.com,"Corpus Christi"
+13,"Kevin Bacon",kevin.bacon@example.com,Austin
+14,"Charlie Brown",,"San Antonio"
+15,"Michael Scott",michael.scott@example.com,"Corpus Christi"
+16,"Rachel Green",rachel.green@example.com,"Fort Worth"
+17,"Bob Jones",bob.jones@example.com,Unknown
+18,"Nina Williams",nina.williams@example.com,Dallas
+19,"Ian Malcolm",ian.malcolm@example.com,Austin
+20,"Diana Prince",diana.prince@example.com,"Fort Worth"
+21,"Ian Malcolm",ian.malcolm@example.com,Houston
+22,"Quentin Tarantino",quentin.tarantino@example.com,"San Antonio"
+23,"Quentin Tarantino",quentin.tarantino@example.com,Austin
+24,"Laura Croft",laura.croft@example.com,"Fort Worth"
+25,"Charlie Brown",charlie.brown@example.com,Dallas
+26,"Evan Wright",evan.wright@example.com,"Corpus Christi"
+27,"Tina Fey",tina.fey@example.com,Arlington
+28,"Laura Croft",laura.croft@example.com,"Corpus Christi"
+29,"Charlie Brown",,"El Paso"
+30,"Charlie Brown",charlie.brown@example.com,Austin
+31,"Diana Prince",diana.prince@example.com,Arlington
+32,"Bob Jones",bob.jones@example.com,Dallas
+33,"Diana Prince",diana.prince@example.com,"San Antonio"
+34,"Nina Williams",nina.williams@example.com,Houston
+35,"Charlie Brown",charlie.brown@example.com,"Corpus Christi"
+36,"Rachel Green",rachel.green@example.com,Austin
+37,"Pam Beesly",pam.beesly@example.com,"San Antonio"
+38,"Michael Scott",michael.scott@example.com,"Fort Worth"
+39,"Rachel Green",rachel.green@example.com,"Corpus Christi"
+40,"Sam Winchester",sam.winchester@example.com,Unknown
+41,"Sam Winchester",sam.winchester@example.com,"Corpus Christi"
+42,"Fiona Gallagher",fiona.gallagher@example.com,Dallas
+43,"Nina Williams",nina.williams@example.com,"El Paso"
+44,"Michael Scott",michael.scott@example.com,Houston

@@ -1,0 +1,47 @@
+order_id,order_timestamp,customer_name,customer_email,customer_city,product_name,category_name,unit_price,quantity,review_rating
+101,"1/18/26 18:07","Alice Smith",alice.smith@example.com,"Fort Worth","Desk Lamp",Furniture,35,2,2
+102,"1/19/26 7:06","Rachel Green",,Dallas,"Bluetooth Speaker",Electronics,49.99,4,1
+103,"1/15/26 12:05","George Clark",george.clark@example.com,"San Antonio","Webcam 1080p",Electronics,65,1,5
+104,"1/16/26 10:45","Rachel Green",rachel.green@example.com,,"Noise Canceling Headphones",Electronics,0,2,4
+105,"1/18/26 12:17","Alice Smith",alice.smith@example.com,Houston,"Noise Canceling Headphones",Electronics,150,3,3
+107,"1/15/26 20:24","Diana Prince",diana.prince@example.com,"El Paso",,,45,3,5
+108,"1/16/26 18:51","Bob Jones",bob.jones@example.com,"Corpus Christi","Webcam 1080p",Electronics,65,1,4
+109,"1/15/26 19:35","Julia Roberts",julia.roberts@example.com,"El Paso","Bluetooth Speaker",Electronics,49.99,2,1
+110,"1/15/26 14:42","Hannah Abbott",hannah.abbott@example.com,"Fort Worth","Mechanical Keyboard",Electronics,85,2,1
+111,"1/17/26 9:17","Oscar Martinez",oscar.martinez@example.com,"El Paso","Ergonomic Chair",Furniture,199.99,3,3
+112,"1/16/26 11:42","Ian Malcolm",ian.malcolm@example.com,Dallas,"Bluetooth Speaker",Electronics,49.99,2,5
+113,"1/19/26 6:15","Fiona Gallagher",fiona.gallagher@example.com,"Corpus Christi","Noise Canceling Headphones",Electronics,150,3,5
+114,"1/16/26 13:43","Kevin Bacon",kevin.bacon@example.com,Austin,"Desk Lamp",Furniture,35,1,3
+115,"1/17/26 12:17","Charlie Brown",,"San Antonio","Bluetooth Speaker",Electronics,49.99,3,2
+116,"1/18/26 20:31","Michael Scott",michael.scott@example.com,"Corpus Christi","Ergonomic Chair",Furniture,199.99,3,2
+117,"1/16/26 16:47","Rachel Green",rachel.green@example.com,"Fort Worth","Bluetooth Speaker",Electronics,49.99,4,5
+119,"1/15/26 20:48","Bob Jones",bob.jones@example.com,,"Mechanical Keyboard",Electronics,85,2,2
+120,"1/19/26 14:43","Nina Williams",nina.williams@example.com,Dallas,"Noise Canceling Headphones",Electronics,150,4,5
+121,"1/17/26 20:33","Ian Malcolm",ian.malcolm@example.com,Austin,"Mechanical Keyboard",Electronics,85,3,3
+122,,"Diana Prince",diana.prince@example.com,"Fort Worth","Noise Canceling Headphones",Electronics,150,2,4
+123,"1/15/26 9:46","Ian Malcolm",ian.malcolm@example.com,Houston,"Webcam 1080p",Electronics,65,1,3
+124,"1/19/26 20:40","Quentin Tarantino",quentin.tarantino@example.com,"San Antonio","Ergonomic Chair",Furniture,199.99,3,2
+125,"1/18/26 6:49","Quentin Tarantino",quentin.tarantino@example.com,Austin,"Bluetooth Speaker",Electronics,49.99,3,4
+126,"1/15/26 11:07","Laura Croft",laura.croft@example.com,"Fort Worth","Desk Lamp",Furniture,35,1,2
+127,"1/20/26 1:36","Charlie Brown",charlie.brown@example.com,Dallas,"Standing Desk",Furniture,350,1,5
+128,"1/19/26 11:08","Evan Wright",evan.wright@example.com,"Corpus Christi","Webcam 1080p",Electronics,0,2,3
+129,"1/18/26 4:55","Tina Fey",tina.fey@example.com,Arlington,"Desk Lamp",Furniture,35,2,3
+130,"1/17/26 12:42","Laura Croft",laura.croft@example.com,"Corpus Christi","Webcam 1080p",Electronics,65,4,1
+131,"1/16/26 16:14","Charlie Brown",,"El Paso","Wireless Mouse",Electronics,25.5,2,5
+132,"1/16/26 13:00","Charlie Brown",charlie.brown@example.com,Austin,"Desk Lamp",Furniture,35,1,1
+134,"1/16/26 12:34","Evan Wright",evan.wright@example.com,"Corpus Christi","Desk Lamp",Furniture,35,4,4
+135,"1/16/26 9:06","Diana Prince",diana.prince@example.com,Arlington,,,45,3,4
+136,"1/17/26 13:29","Bob Jones",bob.jones@example.com,Dallas,"Wireless Mouse",Electronics,25.5,4,3
+137,"1/19/26 15:55","Diana Prince",diana.prince@example.com,"San Antonio","Desk Lamp",Furniture,35,2,5
+138,"1/17/26 18:08","Nina Williams",nina.williams@example.com,Houston,"USB-C Cable",Electronics,12,4,2
+139,"1/20/26 0:59","Charlie Brown",charlie.brown@example.com,"Corpus Christi","Webcam 1080p",Electronics,65,1,1
+140,,"Rachel Green",rachel.green@example.com,Austin,"Mechanical Keyboard",Electronics,85,2,2
+141,"1/17/26 13:31","Pam Beesly",pam.beesly@example.com,"San Antonio","Noise Canceling Headphones",Electronics,150,1,2
+142,"1/17/26 9:00","Michael Scott",michael.scott@example.com,"Fort Worth","Standing Desk",Furniture,350,3,4
+143,"1/19/26 2:46","Rachel Green",rachel.green@example.com,"Corpus Christi","Ergonomic Chair",Furniture,199.99,2,3
+144,"1/16/26 12:03","Sam Winchester",sam.winchester@example.com,,"Webcam 1080p",Electronics,65,1,3
+145,"1/15/26 16:03","Sam Winchester",sam.winchester@example.com,"Corpus Christi","Webcam 1080p",Electronics,65,2,1
+146,"1/18/26 2:05","Fiona Gallagher",fiona.gallagher@example.com,Dallas,"Bluetooth Speaker",Electronics,49.99,1,2
+148,"1/18/26 16:05","Nina Williams",nina.williams@example.com,"El Paso","USB-C Cable",Electronics,12,2,3
+149,"1/16/26 15:16","Michael Scott",michael.scott@example.com,Houston,"USB-C Cable",Electronics,12,4,3
+150,"1/20/26 7:48","Charlie Brown",charlie.brown@example.com,Austin,"Standing Desk",Furniture,350,1,1

@@ -1,0 +1,12 @@
+product_id,product_name,category_name,unit_price
+1,"Desk Lamp",Furniture,35
+2,"Bluetooth Speaker",Electronics,49.99
+3,"Webcam 1080p",Electronics,65
+4,"Noise Canceling Headphones",Electronics,0
+5,"Noise Canceling Headphones",Electronics,150
+6,"Mechanical Keyboard",Electronics,85
+7,"Ergonomic Chair",Furniture,199.99
+8,"Standing Desk",Furniture,350
+9,"Webcam 1080p",Electronics,0
+10,"Wireless Mouse",Electronics,25.5
+11,"USB-C Cable",Electronics,12
